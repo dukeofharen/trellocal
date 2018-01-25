@@ -21,7 +21,7 @@ namespace Trellocal.Services
          _oauthToken = oauthToken;
       }
 
-      public async Task<IEnumerable<Board>> GetBoards()
+      public async Task<IEnumerable<TrelloBoard>> GetBoardsAsync()
       {
          string url = $"https://api.trello.com/1/members/username/boards?key={_apiKey}&token={_oauthToken}";
          using (var response = await _httpClient.GetAsync(url))
@@ -32,7 +32,87 @@ namespace Trellocal.Services
             }
 
             string content = await response.Content.ReadAsStringAsync();
-            var result = JsonConvert.DeserializeObject<Board[]>(content);
+            var result = JsonConvert.DeserializeObject<TrelloBoard[]>(content);
+            return result;
+         }
+      }
+
+      public async Task<IEnumerable<TrelloCard>> GetCardsAsync(string boardId)
+      {
+         string url = $"https://api.trello.com/1/boards/{boardId}/cards?key={_apiKey}&token={_oauthToken}";
+         using (var response = await _httpClient.GetAsync(url))
+         {
+            if (response.StatusCode != HttpStatusCode.OK)
+            {
+               throw new TrellocalException($"Unexpected status coder received from Trello: '{response.StatusCode}'");
+            }
+
+            string content = await response.Content.ReadAsStringAsync();
+            var result = JsonConvert.DeserializeObject<TrelloCard[]>(content);
+            return result;
+         }
+      }
+
+      public async Task<IEnumerable<TrelloList>> GetListsAsync(string boardId)
+      {
+         string url = $"https://api.trello.com/1/boards/{boardId}/lists?key={_apiKey}&token={_oauthToken}";
+         using (var response = await _httpClient.GetAsync(url))
+         {
+            if (response.StatusCode != HttpStatusCode.OK)
+            {
+               throw new TrellocalException($"Unexpected status coder received from Trello: '{response.StatusCode}'");
+            }
+
+            string content = await response.Content.ReadAsStringAsync();
+            var result = JsonConvert.DeserializeObject<TrelloList[]>(content);
+            return result;
+         }
+      }
+
+      public async Task<IEnumerable<TrelloAction>> GetActionsAsync(string cardId)
+      {
+         string url = $"https://api.trello.com/1/cards/{cardId}/actions?key={_apiKey}&token={_oauthToken}";
+         using (var response = await _httpClient.GetAsync(url))
+         {
+            if (response.StatusCode != HttpStatusCode.OK)
+            {
+               throw new TrellocalException($"Unexpected status coder received from Trello: '{response.StatusCode}'");
+            }
+
+            string content = await response.Content.ReadAsStringAsync();
+            var result = JsonConvert.DeserializeObject<TrelloAction[]>(content);
+            return result;
+         }
+      }
+
+      public async Task<IEnumerable<TrelloAttachment>> GetAttachmentsAsync(string cardId)
+      {
+         string url = $"https://api.trello.com/1/cards/{cardId}/attachments?key={_apiKey}&token={_oauthToken}";
+         using (var response = await _httpClient.GetAsync(url))
+         {
+            if (response.StatusCode != HttpStatusCode.OK)
+            {
+               throw new TrellocalException($"Unexpected status coder received from Trello: '{response.StatusCode}'");
+            }
+
+            string content = await response.Content.ReadAsStringAsync();
+            var result = JsonConvert.DeserializeObject<TrelloAttachment[]>(content);
+            return result;
+         }
+      }
+
+      public async Task<IEnumerable<TrelloChecklist>> GetChecklistsAsync(string cardId)
+      {
+         string url = $"https://api.trello.com/1/cards/{cardId}/checklists?key={_apiKey}&token={_oauthToken}";
+         using (var response = await _httpClient.GetAsync(url))
+         {
+            if (response.StatusCode != HttpStatusCode.OK)
+            {
+               throw new TrellocalException($"Unexpected status coder received from Trello: '{response.StatusCode}'");
+            }
+
+            string content = await response.Content.ReadAsStringAsync();
+            var result = JsonConvert.DeserializeObject<TrelloChecklist[]>(content);
             return result;
          }
       }

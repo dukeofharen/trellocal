@@ -2,7 +2,7 @@
 
 namespace Trellocal.Models.Trello
 {
-   public class Board
+   public class TrelloBoard
    {
       [JsonProperty("id")]
       public string Id { get; set; }
