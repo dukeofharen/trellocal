@@ -1,4 +1,5 @@
-﻿using Trellocal.Services.Interfaces;
+﻿using Trellocal.Business.Interfaces;
+using Trellocal.Services.Interfaces;
 
 namespace Trellocal.Business
 {
@@ -7,6 +8,7 @@ namespace Trellocal.Business
       public static void RegisterDependencies(IServiceContainerWrapper wrapper)
       {
          wrapper.RegisterSingleton(wrapper);
+         wrapper.RegisterType<IBackupManager, BackupManager>();
 
          Services.DependencyRegistration.RegisterDependencies(wrapper);
       }

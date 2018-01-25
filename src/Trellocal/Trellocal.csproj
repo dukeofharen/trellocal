@@ -13,6 +13,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Trellocal.Business.Interfaces\Trellocal.Business.Interfaces.csproj" />
+    <ProjectReference Include="..\Trellocal.Business\Trellocal.Business.csproj" />
     <ProjectReference Include="..\Trellocal.DI.Unity\Trellocal.DI.Unity.csproj" />
   </ItemGroup>
 

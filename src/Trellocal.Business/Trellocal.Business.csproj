@@ -5,7 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Trellocal.Business.Interfaces\Trellocal.Business.Interfaces.csproj" />
     <ProjectReference Include="..\Trellocal.Services.Interfaces\Trellocal.Services.Interfaces.csproj" />
+    <ProjectReference Include="..\Trellocal.Services\Trellocal.Services.csproj" />
   </ItemGroup>
 
 </Project>

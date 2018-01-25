@@ -1,5 +1,4 @@
-﻿using Trellocal.Connection;
-using Trellocal.Services.Interfaces;
+﻿using Trellocal.Services.Interfaces;
 
 namespace Trellocal.Services
 {

@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trellocal.Business", "Trell
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trellocal.Services", "Trellocal.Services\Trellocal.Services.csproj", "{E2F35015-F79A-4A19-8922-CE4CAA3486E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trellocal.Business.Interfaces", "Trellocal.Business.Interfaces\Trellocal.Business.Interfaces.csproj", "{02D4ACB2-03AF-4AAD-89BA-49D9534F78B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trellocal.Exceptions", "Trellocal.Exceptions\Trellocal.Exceptions.csproj", "{92325AF5-E2CB-4237-B120-6715AAC91541}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{E2F35015-F79A-4A19-8922-CE4CAA3486E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2F35015-F79A-4A19-8922-CE4CAA3486E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2F35015-F79A-4A19-8922-CE4CAA3486E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02D4ACB2-03AF-4AAD-89BA-49D9534F78B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02D4ACB2-03AF-4AAD-89BA-49D9534F78B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02D4ACB2-03AF-4AAD-89BA-49D9534F78B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02D4ACB2-03AF-4AAD-89BA-49D9534F78B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92325AF5-E2CB-4237-B120-6715AAC91541}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92325AF5-E2CB-4237-B120-6715AAC91541}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92325AF5-E2CB-4237-B120-6715AAC91541}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92325AF5-E2CB-4237-B120-6715AAC91541}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Trellocal.Exceptions\Trellocal.Exceptions.csproj" />
     <ProjectReference Include="..\Trellocal.Models\Trellocal.Models.csproj" />
     <ProjectReference Include="..\Trellocal.Services.Interfaces\Trellocal.Services.Interfaces.csproj" />
   </ItemGroup>
