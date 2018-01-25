@@ -29,6 +29,8 @@ namespace Trellocal.Business
                var checklists = await connector.GetChecklistsAsync(card.Id);
             }
          }
+
+         ;
       }
    }
 }
