@@ -1,4 +1,4 @@
-﻿namespace Trellocal.Connection.Interfaces
+﻿namespace Trellocal.Services.Interfaces
 {
    public interface ITrelloConnectorFactory
    {

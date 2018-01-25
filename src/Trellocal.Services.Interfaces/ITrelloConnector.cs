@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Trellocal.Models.Trello;
 
-namespace Trellocal.Connection.Interfaces
+namespace Trellocal.Services.Interfaces
 {
    public interface ITrelloConnector
    {
